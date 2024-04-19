@@ -18,7 +18,7 @@
 ![project-8](./src/images/part_2/2.5.png)
 ![project-8](./src/images/part_2/2.6.png)
 ###### 6. Use the ping module to check the connection via Ansible.
-![project-8](.src/images/part_2/2.7.png)
+![project-8](./src/images/part_2/2.7.png)
 
 
 #### Write the first playbook for Ansible that performs apt update, installs docker, docker-compose, copies the compose file from the manager and deploys the microservice application.
