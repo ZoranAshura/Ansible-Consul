@@ -1,0 +1,13 @@
+---
+- name: Update all apt packages
+  apt: 
+    update_cache: yes
+    force_apt_get: yes 
+- name: Install apache web-server
+  apt:
+    name: apache2
+    state: latest
+- name: Enable service apache2
+  ansible.builtin.service:
+    name: apache2
+    enabled: yes

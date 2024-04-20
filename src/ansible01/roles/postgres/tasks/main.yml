@@ -1,0 +1,32 @@
+---
+- name: Update all apt packages
+  apt:
+    update_cache: yes
+    force_apt_get: yes
+- name: Install postgres database
+  apt:
+    name: postgresql
+    state: latest
+- name: Enable service psql
+  ansible.builtin.service:
+    name: postgresql
+    enabled: yes
+- name: Utility present
+  ansible.builtin.package:
+    name: python3-psycopg2
+    state: present
+- name: Create a new database with name - mydata
+  community.postgresql.postgresql_db:
+    state: present
+    name: mydata
+  become: true 
+  become_user: postgres
+- name: Create table-test in the mydata database
+  community.postgresql.postgresql_query:
+    db: mydata
+    query:
+    - CREATE TABLE testtable (id integer, name text, age integer);
+    - INSERT INTO testtable (id, name, age) VALUES (1, 'Human1', 30);
+    - INSERT INTO testtable (id, name, age) VALUES (2, 'Human2', 25);
+    - INSERT INTO testtable (id, name, age) VALUES (3, 'Human3', 22);
+  become_user: postgres

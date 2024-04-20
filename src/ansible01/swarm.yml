@@ -19,7 +19,6 @@
     fetch:
       src: ./worker.sh
       dest: ./ 
-        #- name: Create docker-swarm worker
 - hosts: node2
   become: true
   tasks:

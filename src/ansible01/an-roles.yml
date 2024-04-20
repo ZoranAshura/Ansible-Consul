@@ -1,0 +1,9 @@
+---
+- hosts: node1
+  become: true
+  roles:
+    - apache
+- hosts: node2
+  become: true
+  roles:
+    - postgres

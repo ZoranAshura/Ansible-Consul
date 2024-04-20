@@ -31,3 +31,13 @@
 ![project-8](./src/images/part_3/3.4.png)
 > ETC 
 
+#### Assign the first role to node01 and the second role to node02. Make sure that postgres and the apache server are available. For Apache, a web page should open in the browser. As for PostgreSQL, you need to connect from the local machine and display the contents of the previously created table with data.
+![project-8](./src/images/part_3/3.4.9.png)
+![project-8](./src/images/part_3/3.5.png)
+
+> You can find all the tasks for the roles in the src/ansible01/roles directory
+
+![project-8](./src/images/part_3/3.6.png)
+![project-8](./src/images/part_3/3.7.png)
+![project-8](./src/images/part_3/3.8.png)
+![project-8](./src/images/part_3/3.9.png)
